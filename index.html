@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Wedding Invitation | Fadil & Aisyah</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- =========================
+         MUSIK WEDDING
+    ========================== -->
+
+    <audio id="weddingMusic" loop>
+        <source src="assets/wedding-music.mp3" type="audio/mpeg">
+    </audio>
+
+
+    <!-- =========================
+         COVER UNDANGAN
+    ========================== -->
+
+    <section class="cover" id="cover">
+
+        <div class="cover-decoration decoration-one">✿</div>
+        <div class="cover-decoration decoration-two">❀</div>
+
+        <div class="cover-content">
+
+            <p class="small-title">THE WEDDING OF</p>
+
+            <h1>Fadil <span>&</span> Aisyah</h1>
+
+            <div class="cover-line"></div>
+
+            <p class="cover-date">
+                Minggu, 20 Desember 2026
+            </p>
+
+            <p class="guest">
+                Kepada Yth. Bapak/Ibu/Saudara/i
+            </p>
+
+            <button class="open-button" onclick="openInvitation()">
+                <span>♡</span>
+                Buka Undangan
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         KONTEN UTAMA
+    ========================== -->
+
+    <main id="invitation">
+
+
+        <!-- HERO -->
+
+        <section class="hero reveal">
+
+            <p class="the-wedding">
+                THE WEDDING OF
+            </p>
+
+            <h1>
+                Fadil <span>&</span> Aisyah
+            </h1>
+
+            <p class="hero-date">
+                20 Desember 2026
+            </p>
+
+            <div class="flower">✿</div>
+
+            <div class="scroll-indicator">
+                <span>Scroll Down</span>
+                <div class="scroll-arrow">↓</div>
+            </div>
+
+        </section>
+
+
+        <!-- PEMBUKAAN -->
+
+        <section class="intro section reveal">
+
+            <p class="small-title">
+                ASSALAMUALAIKUM WARAHMATULLAHI WABARAKATUH
+            </p>
+
+            <h2>
+                Dengan Memohon Rahmat dan Ridho Allah SWT
+            </h2>
+
+            <div class="ornament">❀</div>
+
+            <p>
+                Dengan penuh rasa syukur, kami bermaksud
+                menyelenggarakan acara pernikahan putra-putri kami.
+
+                Merupakan suatu kehormatan dan kebahagiaan bagi kami
+                apabila Bapak/Ibu/Saudara/i berkenan hadir untuk
+                memberikan doa dan restu kepada kedua mempelai.
+            </p>
+
+        </section>
+
+
+        <!-- PROFIL MEMPELAI -->
+
+        <section class="couple section reveal">
+
+            <p class="small-title">
+                THE BRIDE & THE GROOM
+            </p>
+
+            <h2>Mempelai</h2>
+
+            <div class="couple-container">
+
+                <!-- MEMPELAI PRIA -->
+
+                <div class="person">
+
+                    <div class="photo-frame">
+                        <img src="assets/mempelai-pria.png"
+                            alt="Foto Fadil">
+                    </div>
+
+                    <h3>Fadil</h3>
+
+                    <p>
+                        Putra dari Bapak ... dan Ibu ...
+                    </p>
+
+                </div>
+
+
+                <div class="and">&</div>
+
+
+                <!-- MEMPELAI WANITA -->
+
+                <div class="person">
+
+                    <div class="photo-frame">
+                        <img src="assets/pengantin-wanita.png"
+                            alt="Foto Aisyah">
+                    </div>
+
+                    <h3>Aisyah Putri</h3>
+
+                    <p>
+                        Putri dari Bapak ... dan Ibu ...
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- COUNTDOWN -->
+
+        <section class="countdown section reveal">
+
+            <p class="small-title">
+                SAVE THE DATE
+            </p>
+
+            <h2>Menuju Hari Bahagia</h2>
+
+            <p>
+                Kami menantikan kehadiran Anda
+            </p>
+
+            <div class="timer">
+
+                <div class="timer-box">
+                    <span id="days">00</span>
+                    <small>Hari</small>
+                </div>
+
+                <div class="timer-box">
+                    <span id="hours">00</span>
+                    <small>Jam</small>
+                </div>
+
+                <div class="timer-box">
+                    <span id="minutes">00</span>
+                    <small>Menit</small>
+                </div>
+
+                <div class="timer-box">
+                    <span id="seconds">00</span>
+                    <small>Detik</small>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- WAKTU DAN TEMPAT -->
+
+        <section class="event section reveal">
+
+            <p class="small-title">
+                WEDDING CEREMONY
+            </p>
+
+            <h2>Waktu & Tempat</h2>
+
+            <div class="event-container">
+
+                <!-- AKAD -->
+
+                <div class="event-card">
+
+                    <div class="event-icon">♡</div>
+
+                    <h3>Akad Nikah</h3>
+
+                    <div class="event-line"></div>
+
+                    <p>
+                        Minggu, 20 Desember 2026
+                    </p>
+
+                    <p>
+                        Pukul 08.00 WITA - Selesai
+                    </p>
+
+                    <p>
+                        Gedung Pernikahan
+                    </p>
+
+                </div>
+
+
+                <!-- RESEPSI -->
+
+                <div class="event-card">
+
+                    <div class="event-icon">❀</div>
+
+                    <h3>Resepsi</h3>
+
+                    <div class="event-line"></div>
+
+                    <p>
+                        Minggu, 20 Desember 2026
+                    </p>
+
+                    <p>
+                        Pukul 11.00 WITA - Selesai
+                    </p>
+
+                    <p>
+                        Gedung Pernikahan
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <a class="map-button"
+                href="https://www.google.com/maps"
+                target="_blank"
+                rel="noopener">
+
+                <span>⌖</span>
+                Lihat Lokasi
+
+            </a>
+
+        </section>
+
+
+        <!-- GALERI FOTO -->
+
+        <section class="gallery section reveal">
+
+            <p class="small-title">
+                OUR MEMORIES
+            </p>
+
+            <h2>Galeri Kami</h2>
+
+            <p class="gallery-description">
+                Beberapa momen indah perjalanan cinta kami.
+            </p>
+
+            <div class="gallery-container">
+
+                <div class="gallery-item">
+                    <img src="assets/foto-pengantin.jpg"
+                        alt="Momen pernikahan 1">
+                </div>
+
+                <div class="gallery-item">
+                    <img src="assets/foto-pengantin.jpg"
+                        alt="Momen pernikahan 2">
+                </div>
+
+                <div class="gallery-item">
+                    <img src="assets/foto-pengantin.jpg"
+                        alt="Momen pernikahan 3">
+                </div>
+
+                <div class="gallery-item">
+                    <img src="assets/foto-pengantin.jpg"
+                        alt="Momen pernikahan 4">
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- UCAPAN DAN DOA -->
+
+        <section class="wishes section reveal">
+
+            <p class="small-title">
+                WISHES & PRAYERS
+            </p>
+
+            <h2>Ucapan & Doa</h2>
+
+            <p>
+                Berikan doa dan ucapan terbaik untuk kedua mempelai.
+            </p>
+
+
+            <form id="wishForm">
+
+                <input type="text"
+                    id="guestName"
+                    placeholder="Nama Anda"
+                    maxlength="60"
+                    required>
+
+                <textarea
+                    id="guestMessage"
+                    placeholder="Tuliskan ucapan dan doa..."
+                    maxlength="500"
+                    required></textarea>
+
+                <button type="submit">
+                    Kirim Ucapan
+                </button>
+
+            </form>
+
+
+            <div class="wish-heading">
+                Ucapan Tamu
+            </div>
+
+            <div id="wishList"></div>
+
+        </section>
+
+
+        <!-- PENUTUP -->
+
+        <footer class="reveal">
+
+            <div class="footer-flower">❀</div>
+
+            <p class="small-title">
+                THANK YOU
+            </p>
+
+            <h2>Fadil & Aisyah</h2>
+
+            <p>
+                Merupakan suatu kebahagiaan dan kehormatan
+                bagi kami apabila Anda berkenan hadir.
+            </p>
+
+            <p class="footer-thanks">
+                Terima kasih atas doa dan restu Anda.
+            </p>
+
+            <div class="footer-line"></div>
+
+            <p class="copyright">
+                © 2026 Wedding Invitation
+            </p>
+
+        </footer>
+
+
+    </main>
+
+
+    <!-- =========================
+         TOMBOL MUSIK
+    ========================== -->
+
+    <button
+        class="music-button"
+        id="musicButton"
+        onclick="toggleMusic()"
+        aria-label="Putar atau hentikan musik"
+        title="Musik Wedding">
+
+        ♫
+
+    </button>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

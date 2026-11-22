@@ -1,0 +1,1078 @@
+/* =====================================
+   1. RESET DAN PENGATURAN DASAR
+===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 20px;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #fffaf5;
+    color: #594b40;
+    overflow-x: hidden;
+}
+
+button {
+    font-family: inherit;
+}
+
+:root {
+    --cream: #fffaf5;
+    --beige: #f3e6d8;
+    --gold: #bd9870;
+    --gold-dark: #a77b4f;
+    --brown: #594b40;
+    --white: #ffffff;
+}
+
+
+/* =====================================
+   2. COVER UNDANGAN
+===================================== */
+
+.cover {
+    position: fixed;
+    inset: 0;
+
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    color: white;
+
+    background:
+        linear-gradient(
+            rgba(40, 30, 25, 0.50),
+            rgba(40, 30, 25, 0.50)
+        ),
+        url('assets/foto-pengantin.jpg');
+
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    overflow: hidden;
+    z-index: 1000;
+
+    transition:
+        opacity 1.2s ease,
+        visibility 1.2s ease,
+        transform 1.2s ease;
+}
+
+.cover.hide {
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.05);
+    pointer-events: none;
+}
+
+.cover.hide {
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.05);
+    pointer-events: none;
+}
+
+.cover.hide {
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.08);
+    pointer-events: none;
+}
+
+.cover-content {
+    position: relative;
+    z-index: 2;
+    padding: 25px;
+    animation: coverAppear 1.5s ease;
+}
+
+@keyframes coverAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+.small-title {
+    font-size: 12px;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.cover h1,
+.hero h1,
+footer h2 {
+    font-family: 'Great Vibes', cursive;
+    font-weight: normal;
+}
+
+.cover h1 {
+    font-size: clamp(55px, 9vw, 95px);
+    margin-bottom: 15px;
+}
+
+.cover h1 span,
+.hero h1 span {
+    color: #e8c69f;
+}
+
+.cover-line {
+    width: 100px;
+    height: 2px;
+    background: #e8c69f;
+    margin: 20px auto;
+}
+
+.cover-date {
+    font-size: 15px;
+    letter-spacing: 2px;
+    margin-bottom: 35px;
+}
+
+.guest {
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+.open-button {
+    background: var(--gold);
+    color: white;
+    border: 1px solid #e4c9a8;
+
+    padding: 14px 30px;
+    border-radius: 40px;
+
+    font-size: 14px;
+    cursor: pointer;
+
+    transition: 0.4s;
+}
+
+.open-button:hover {
+    background: var(--gold-dark);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px #00000030;
+}
+
+.open-button span {
+    margin-right: 8px;
+}
+
+.cover-decoration {
+    position: absolute;
+    color: #e8c69f;
+    font-size: 90px;
+    opacity: 0.4;
+}
+
+.decoration-one {
+    top: 8%;
+    left: 8%;
+}
+
+.decoration-two {
+    bottom: 8%;
+    right: 8%;
+}
+
+
+/* =====================================
+   3. KONTEN UTAMA
+===================================== */
+
+#invitation {
+    display: none;
+    width: 100%;
+}
+
+#invitation.show {
+    display: block;
+}
+
+.section {
+    padding: 100px 8%;
+    text-align: center;
+}
+
+
+/* =====================================
+   4. HERO SECTION
+===================================== */
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    position: relative;
+
+    background:
+        linear-gradient(
+            rgba(243, 230, 216, 0.26),
+            rgba(243, 230, 216, 0.194)
+        ),
+        url('assets/foto-pengantin.jpg')
+        center/cover no-repeat;
+    
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    overflow: hidden;
+    z-index: 1000;
+
+    padding: 40px 20px;
+}
+
+.the-wedding {
+    color: #ffffff;
+    padding-bottom: 30px;
+}
+
+.hero h1 {
+    font-size: clamp(65px, 10vw, 110px);
+    color: white;
+    margin-bottom: 20px;
+}
+
+.mempelai {
+    color: #ffffff;
+}
+
+.hero-date {
+    letter-spacing: 3px;
+    font-size: 15px;
+    color: white;
+}
+
+.flower {
+    font-size: 50px;
+    color: white;
+    margin-top: 30px;
+    animation: rotateFlower 8s linear infinite;
+}
+
+@keyframes rotateFlower {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: white;
+
+    animation: scrollFloat 2s infinite;
+}
+
+.scroll-arrow {
+    font-size: 25px;
+}
+
+@keyframes scrollFloat {
+
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+
+}
+
+
+/* =====================================
+   5. JUDUL DAN ORNAMEN
+===================================== */
+
+h2 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 48px;
+    font-weight: normal;
+    color: var(--gold-dark);
+    margin-bottom: 25px;
+}
+
+.ornament {
+    font-size: 35px;
+    color: var(--gold);
+    margin: 20px;
+}
+
+
+/* =====================================
+   6. INTRO SECTION
+===================================== */
+
+.intro {
+    max-width: 1000px;
+    margin: auto;
+    line-height: 2;
+}
+
+.intro p:last-child {
+    max-width: 750px;
+    margin: auto;
+    font-size: 14px;
+    color: #76695e;
+}
+
+.intro h2 {
+    line-height: 1.4;
+}
+
+
+/* =====================================
+   7. COUPLE SECTION
+===================================== */
+
+.couple {
+    background: #f8efe6;
+}
+
+.couple-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 55px;
+    flex-wrap: wrap;
+    margin-top: 45px;
+}
+
+.person {
+    width: 280px;
+    opacity: 0;
+    transform: translateY(60px);
+
+    transition:
+        opacity 1s ease,
+        transform 1s ease;
+}
+
+.couple.active .person {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.couple.active .person:nth-child(3) {
+    transition-delay: 0.3s;
+}
+
+.photo-frame {
+    width: 240px;
+    height: 300px;
+
+    margin: auto;
+
+    border: 7px solid white;
+    border-radius: 150px 150px 20px 20px;
+
+    overflow: hidden;
+    box-shadow: 0 10px 30px #00000015;
+}
+
+.photo-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.7s;
+}
+
+.photo-frame:hover img {
+    transform: scale(1.1);
+}
+
+.person h3 {
+    margin: 25px 0 10px;
+    font-size: 22px;
+    color: var(--gold-dark);
+}
+
+.person p {
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.and {
+    font-family: 'Great Vibes', cursive;
+    font-size: 75px;
+    color: var(--gold);
+}
+
+
+/* =====================================
+   8. COUNTDOWN SECTION
+===================================== */
+
+.countdown {
+    background: var(--beige);
+}
+
+.countdown > p:not(.small-title) {
+    font-size: 13px;
+    margin-bottom: 35px;
+}
+
+.timer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.timer-box {
+    min-width: 105px;
+    padding: 25px 15px;
+
+    background: white;
+    border-radius: 15px;
+
+    box-shadow: 0 5px 20px #00000010;
+
+    transition: 0.4s;
+}
+
+.timer-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px #00000020;
+}
+
+.timer-box span {
+    display: block;
+    font-size: 35px;
+    font-weight: 600;
+    color: var(--gold-dark);
+}
+
+.timer-box small {
+    font-size: 12px;
+    color: #77685b;
+}
+
+
+/* =====================================
+   9. EVENT SECTION
+===================================== */
+
+.event-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.event-card {
+    width: 310px;
+    padding: 40px 25px;
+
+    background: white;
+    border-radius: 20px;
+
+    box-shadow: 0 8px 25px #0000000d;
+
+    opacity: 0;
+    transform: translateY(50px);
+
+    transition:
+        opacity 0.9s ease,
+        transform 0.9s ease,
+        box-shadow 0.4s ease;
+}
+
+.event.active .event-card {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.event.active .event-card:nth-child(2) {
+    transition-delay: 0.25s;
+}
+
+.event-card:hover {
+    box-shadow: 0 15px 30px #00000015;
+    transform: translateY(-8px);
+}
+
+.event-icon {
+    font-size: 35px;
+    color: var(--gold);
+    margin-bottom: 15px;
+}
+
+.event-card h3 {
+    font-size: 20px;
+    color: var(--gold-dark);
+    margin-bottom: 20px;
+}
+
+.event-line {
+    width: 50px;
+    height: 2px;
+    background: var(--gold);
+    margin: 0 auto 20px;
+}
+
+.event-card p {
+    font-size: 13px;
+    line-height: 2.2;
+}
+
+.map-button {
+    display: inline-block;
+
+    margin-top: 35px;
+    padding: 14px 30px;
+
+    background: var(--gold);
+    color: white;
+
+    text-decoration: none;
+    border-radius: 35px;
+
+    font-size: 13px;
+
+    transition: 0.4s;
+}
+
+.map-button:hover {
+    background: var(--gold-dark);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px #00000020;
+}
+
+.map-button span {
+    font-size: 18px;
+    margin-right: 8px;
+}
+
+
+/* =====================================
+   10. GALLERY SECTION
+===================================== */
+
+.gallery {
+    background: #f8efe6;
+}
+
+.gallery-description {
+    font-size: 13px;
+    margin-bottom: 35px;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+
+    max-width: 900px;
+    margin: auto;
+}
+
+.gallery-item {
+    overflow: hidden;
+    border-radius: 18px;
+    height: 520px;
+
+    box-shadow: 0 8px 20px #00000010;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    opacity: 0;
+    transform: scale(0.85);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.gallery.active .gallery-item img {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.gallery.active .gallery-item:nth-child(2) img {
+    transition-delay: 0.15s;
+}
+
+.gallery.active .gallery-item:nth-child(3) img {
+    transition-delay: 0.3s;
+}
+
+.gallery.active .gallery-item:nth-child(4) img {
+    transition-delay: 0.45s;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.08);
+}
+
+
+/* =====================================
+   11. WISHES SECTION
+===================================== */
+
+.wishes {
+    background: var(--beige);
+}
+
+.wishes > p:not(.small-title) {
+    font-size: 13px;
+}
+
+.wishes form {
+    max-width: 550px;
+    margin: 35px auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.wishes input,
+.wishes textarea {
+    width: 100%;
+    padding: 16px;
+
+    border: 1px solid #e2cbb2;
+    border-radius: 12px;
+
+    background: white;
+    color: var(--brown);
+
+    font-family: inherit;
+    font-size: 13px;
+
+    outline: none;
+    transition: 0.3s;
+}
+
+.wishes input:focus,
+.wishes textarea:focus {
+    border-color: var(--gold);
+    box-shadow: 0 0 0 3px #bd987020;
+}
+
+.wishes textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+.wishes form button {
+    padding: 15px;
+
+    background: var(--gold);
+    color: white;
+
+    border: none;
+    border-radius: 12px;
+
+    font-size: 14px;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.wishes form button:hover {
+    background: var(--gold-dark);
+    transform: translateY(-3px);
+}
+
+.wish-heading {
+    font-weight: 600;
+    color: var(--gold-dark);
+    margin: 30px 0 15px;
+}
+
+#wishList {
+    max-width: 550px;
+    margin: auto;
+    text-align: left;
+}
+
+.wish-item {
+    background: white;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 12px;
+
+    box-shadow: 0 5px 15px #00000008;
+
+    overflow-wrap: anywhere;
+    animation: wishAppear 0.6s ease;
+}
+
+.wish-item strong {
+    display: block;
+    color: var(--gold-dark);
+    margin-bottom: 8px;
+}
+
+.wish-item p {
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+@keyframes wishAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =====================================
+   12. FOOTER
+===================================== */
+
+footer {
+    padding: 80px 20px;
+    text-align: center;
+
+    background: #594b40;
+    color: white;
+}
+
+footer h2 {
+    font-size: 65px;
+    color: #e8c69f;
+    margin: 20px 0;
+}
+
+footer p {
+    font-size: 13px;
+    line-height: 2;
+}
+
+.footer-flower {
+    font-size: 45px;
+    color: #e8c69f;
+    margin-bottom: 25px;
+}
+
+.footer-thanks {
+    margin-top: 20px;
+}
+
+.footer-line {
+    width: 100px;
+    height: 1px;
+    background: #bd9870;
+    margin: 30px auto;
+}
+
+.copyright {
+    font-size: 11px;
+    opacity: 0.7;
+}
+
+
+/* =====================================
+   13. TOMBOL MUSIK
+===================================== */
+
+.music-button {
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+
+    width: 55px;
+    height: 55px;
+
+    border: 2px solid #e8c69f;
+    border-radius: 50%;
+
+    background: var(--gold);
+    color: white;
+
+    font-size: 25px;
+    cursor: pointer;
+
+    z-index: 1001;
+
+    box-shadow: 0 5px 20px #00000030;
+
+    transition: 0.4s;
+}
+
+.music-button:hover {
+    background: var(--gold-dark);
+    transform: scale(1.1);
+}
+
+
+/* =====================================
+   14. SCROLL REVEAL ANIMATION
+===================================== */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(80px);
+
+    transition:
+        opacity 1s ease,
+        transform 1s cubic-bezier(0.2, 0.7, 0.3, 1);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* HERO ANIMATION */
+
+.hero.reveal {
+    opacity: 0;
+    transform: scale(0.92);
+}
+
+.hero.reveal.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+/* =====================================
+   15. RESPONSIVE TABLET
+===================================== */
+
+@media (max-width: 768px) {
+
+    .cover {
+        background-size: cover;
+        background-position: center center;
+    }
+
+    .section {
+        padding: 75px 6%;
+    }
+
+    .cover h1 {
+        font-size: 65px;
+    }
+
+    .hero {
+        min-height: 90vh;
+    }
+
+    .hero h1 {
+        font-size: 75px;
+    }
+
+    .couple-container {
+        gap: 35px;
+    }
+
+    .person {
+        width: 100%;
+    }
+
+    .and {
+        font-size: 55px;
+    }
+
+    .photo-frame {
+        width: 220px;
+        height: 270px;
+    }
+
+    .timer {
+        gap: 12px;
+    }
+
+    .timer-box {
+        min-width: 75px;
+        padding: 18px 10px;
+    }
+
+    .timer-box span {
+        font-size: 27px;
+    }
+
+    .event-card {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .gallery-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .gallery-item {
+        height: 280px;
+    }
+
+}
+
+
+/* =====================================
+   16. RESPONSIVE SMARTPHONE
+===================================== */
+
+@media (max-width: 480px) {
+
+    .cover {
+        background-size: cover;
+        background-position: center center;
+    }
+
+    .section {
+        padding: 65px 20px;
+    }
+
+    .small-title {
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+
+    .cover h1 {
+        font-size: 53px;
+    }
+
+    .cover-date {
+        font-size: 12px;
+    }
+
+    .hero {
+        min-height: 100vh;
+    }
+
+    .hero h1 {
+        font-size: 60px;
+    }
+
+    .hero-date {
+        font-size: 12px;
+    }
+
+    h2 {
+        font-size: 39px;
+    }
+
+    .intro h2 {
+        font-size: 35px;
+    }
+
+    .person h3 {
+        font-size: 20px;
+    }
+
+    .photo-frame {
+        width: 200px;
+        height: 250px;
+    }
+
+    .timer {
+        gap: 9px;
+    }
+
+    .timer-box {
+        min-width: 65px;
+        padding: 15px 8px;
+    }
+
+    .timer-box span {
+        font-size: 23px;
+    }
+
+    .timer-box small {
+        font-size: 10px;
+    }
+
+    .event-card {
+        padding: 30px 15px;
+    }
+
+    .gallery-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .gallery-item {
+        height: 190px;
+    }
+
+    .music-button {
+        width: 48px;
+        height: 48px;
+        right: 15px;
+        bottom: 15px;
+    }
+
+    footer h2 {
+        font-size: 52px;
+    }
+
+}
+
+
+/* =====================================
+   17. AKSESIBILITAS ANIMASI
+===================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+
+}
